@@ -1,0 +1,232 @@
+* {
+    box-sizing: border-box;
+  }
+  .page1 {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: #df9542;
+  }
+  
+  /* Black Background for Top Section */
+  .top-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #000;
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+  }
+  
+  /* PressKit Button and Social Media Icons - Left Section */
+  .top-bar-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .presskit-button {
+    width: 160px;
+    height: 51px;
+  }
+  
+  /* Buy Now and App Store Buttons - Right Section */
+  .top-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .buy-now,
+  .googleplay-btn,
+  .applestore-btn {
+    width: auto;
+    height: 50px;
+  }
+  
+  /* Social Media Icons */
+  .discord-normal,
+  .instagram-normal,
+  .youtube-normal,
+  .x-normal,
+  .facebook-normal {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  /* Background Video */
+  .background-video {
+    position: absolute;
+    top: 70px;
+    /* Starts just below the black top bar */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+  
+  /* Background Color (Above Video, Below Elements) */
+  .background-color {
+    position: absolute;
+    top: 80vh;
+    left: 0;
+    width: 100%;
+    height: 70vh;
+    background-color: #df9542;
+    z-index: 2;
+  }
+  
+  /* Core Elements - Maintain Absolute Positioning for Visual Consistency */
+  .spurpunk-title,
+  .skeleton-frame,
+  .trailer-ribbon,
+  .are-you-spurpunk,
+  .map-cactus2,
+  .map-grass-icon,
+  .map-grass-icon-duplicate,
+  .map-cactus-icon,
+  .page1-dotted-line,
+  .arrow-down,
+  .page1-landmass {
+    position: absolute;
+    z-index: 4;
+  }
+  
+  /* Specific Elements Styling */
+  .spurpunk-title {
+    top: calc(199.5px - 175px / 2);
+    left: calc(50% - 536px / 2);
+    width: 536px;
+    height: 175px;
+  }
+  
+  .skeleton-frame {
+    top: 300px;
+    left: 41%;
+    transform: translateX(-50%);
+    width: 280px;
+    height: auto;
+  }
+  
+  /* Trailer Wrapper */
+  .trailer-wrapper {
+    position: relative;
+    width: fit-content; 
+    margin: 0 auto; 
+    top: 200px;
+  }
+  
+  /* Skeleton Frame (Blue) */
+  .skeleton-frame {
+    position: absolute; /* Positioned relative to the trailer-wrapper */
+    top: 275px;
+    left: -120px;
+    transform: translateY(-50%);
+    width: auto;
+    max-width: 60vw;
+    height: auto;
+    z-index: 4;
+  }
+  
+  /* Trailer Ribbon */
+  .trailer-ribbon {
+    position: absolute; /* Position inside the trailer-wrapper */
+    top: 480px;
+    left: -140px; /* Keep consistent relative to the wrapper */
+    transform: translateY(-50%); /* Center vertically within the wrapper */
+    width: auto;
+    max-width: 70vw;
+    height: auto;
+    z-index: 5;
+  }
+  
+  /* Play Trailer Button */
+  .play-trailer-normal {
+    position: absolute; /* Positioned absolutely in relation to the wrapper */
+    top: 545px;
+    left: -62.5px; /* Ensure it aligns with the trailer ribbon */
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 6;
+  }
+  
+  .are-you-spurpunk {
+    top: calc(500px + 280px + 65px);
+    left: 28%;
+    transform: translateX(-50%);
+    font-size: 2.5rem;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .map-cactus2 {
+    top: 500px;
+    left: 40px;
+    width: 159px;
+    height: 160px;
+    z-index: 6;
+  }
+  
+  .compass-icon {
+    position: absolute;
+    top: 80vh;
+    left: 210px;
+    width: 200px;
+    height: 200px;
+    z-index: 3;
+  }
+  
+  .map-grass-icon {
+    top: 871px;
+    left: 200px;
+    width: 53px;
+    height: 94px;
+  }
+  
+  .map-grass-icon-duplicate {
+    top: 600px;
+    left: 900px;
+    width: 53px;
+    height: 94px;
+  }
+  
+  .map-cactus-icon {
+    top: 500px;
+    left: 1017.5px;
+    width: 153px;
+    height: 136px;
+  }
+  
+  .page1-dotted-line {
+    top: calc(964px - 750px / 2);
+    left: calc(50% - 1000px / 2);
+    width: 882px;
+    height: 380px;
+  }
+  
+  .arrow-down {
+    top: calc(1068px - 500px / 2);
+    left: calc(50% + (1009px - 1220px / 2));
+    width: 92px;
+    height: 88px;
+  }
+  
+  /* Page 1 Landmass Layer */
+  .page1-landmass {
+    top: 80vh;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 3;
+    /* Below core elements */
+  }
+  
