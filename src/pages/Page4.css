@@ -289,7 +289,7 @@ box-sizing: border-box;
 
 @media (min-width: 2560px)  {
   .p4-landmass {
-    max-height: 1400px;
+    max-height: 100vh;
   }
   .cactus {
     bottom: 0%;
@@ -299,6 +299,10 @@ box-sizing: border-box;
     max-width: 150px;
   }
   .submit-button{
-    width: 150%;
+    width: 10vw;
+  }
+  .bottom-img {
+    max-height: 50vh;
   }
 }
+

@@ -49,15 +49,19 @@
   font-size: 3vw;
   white-space: nowrap;
 }
+.tag {
+  width: fit-content;
+  height: 10%;
+}
 .playstore-btn,
 .appstore-btn {
-  width: auto;
-  height: 10%;
+  width: 50%;
+  height: auto;
 }
 .appstore-btn:hover,
 .playstore-btn:hover {
   box-shadow: 0 0 15px #e8e8e8;
-  border-radius: 14px;
+  border-radius: 15px;
 }
 
 .title-container {
@@ -114,7 +118,7 @@
   width: 13%;
   height: auto;
   top: -13%;
-  right: 10%;
+  right: 8%;
   z-index: 1;
 }
 .p1-dotted-line {
@@ -221,7 +225,7 @@
 
 @media (min-width: 2560px){
   .background-video {
-    max-height: 950px;
+    max-height: 70vh;
   }
   .social-btn {
     min-width: 110px;
@@ -246,5 +250,18 @@
   }
   .play-now {
     font-size: 4vw;
+  }
+}
+
+@-moz-document url-prefix() {
+  @media (min-width: 1024px) {
+    .bottom-section {
+      margin-top: -6%;
+    }
+  }
+  @media (min-width: 1440px) {
+    .bottom-section {
+      margin-top: -8%;
+    }
   }
 }

@@ -91,7 +91,7 @@ const Page1 = () => {
           <motion.p className="play-now justify-content-center" initial={{ y: -25, opacity: 0 }} animate={{ y: 5, opacity: 1 }} 
                     transition={{ duration: 0.25, ease: 'easeOut' }}>Play Now:</motion.p>
 
-          <a href="https://play.google.com/store/apps/details?id=com.easleydunnproductions.spurpunk&hl=en_US&gl=US" target="_blank" rel="noopener noreferrer" className="tag">
+          <a href="https://play.google.com/store/apps/details?id=com.easleydunnproductions.spurpunk&hl=en_US&gl=US" target="_blank" rel="noopener noreferrer" className="tag justify-content-centers">
             <motion.img
               src={GooglePlayBtn} alt="Google Play Store" className="playstore-btn"
               initial={{ opacity: 0, scale: 1.5 }} animate={{ opacity: 1, scale: 1 }} 
