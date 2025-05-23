@@ -60,8 +60,8 @@ const Page1 = () => {
 
   return (
     <div className="g-0 page1">
-      <div className="top-bar d-flex py-2 px-5 d-flex w-100 justify-content-between align-items-center">
-        <div className="d-flex align-items-center gap-3">
+      <div className="top-bar d-flex py-2 px-5 w-100 justify-content-between align-items-center">
+        <div className="d-flex align-items-center gap-3 justify-content-start">
           <motion.img src={SpurpunkIcon} alt="Press Kit" className="presskit-btn" initial={{ opacity: 0, scale: 1.5 }}
             animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1, ease: 'easeOut' }} />
 
@@ -78,6 +78,7 @@ const Page1 = () => {
             <motion.img src={pressedStates.youtube ? YoutubePressed : YoutubeNormal} alt="Youtube" className="social-btn mx-2"
               initial={{ y: -25, opacity: 0 }} animate={{ y: [-25, 20, 0], opacity: 1 }}
               transition={{ type: "spring", stiffness: 250, damping: 5 }} onClick={() => handlePress('youtube', 200)} />
+
             <motion.img src={pressedStates.x ? XPressed : XNormal} alt="X" className="social-btn mx-2"
               initial={{ y: -25, opacity: 0 }} animate={{ y: [-25, 20, 0], opacity: 1 }}
               transition={{ type: "spring", stiffness: 250, damping: 5 }} onClick={() => handlePress('x', 200)} />
@@ -87,18 +88,17 @@ const Page1 = () => {
                         transition={{ type: "spring", stiffness: 250, damping: 5 }} onClick={() => handlePress('facebook', 200)} />
           </div>
         </div>
-        <div className="d-flex align-items-center gap-5">
+        <div className="d-flex align-items-center gap-3 justify-content-end">
           <motion.p className="play-now justify-content-center" initial={{ y: -25, opacity: 0 }} animate={{ y: 5, opacity: 1 }} 
                     transition={{ duration: 0.25, ease: 'easeOut' }}>Play Now:</motion.p>
 
-          <a href="https://play.google.com/store/apps/details?id=com.easleydunnproductions.spurpunk&hl=en_US&gl=US" target="_blank" rel="noopener noreferrer" className="tag justify-content-centers">
+          <a href="https://play.google.com/store/apps/details?id=com.easleydunnproductions.spurpunk&hl=en_US&gl=US" target="_blank" rel="noopener noreferrer">
             <motion.img
               src={GooglePlayBtn} alt="Google Play Store" className="playstore-btn"
               initial={{ opacity: 0, scale: 1.5 }} animate={{ opacity: 1, scale: 1 }} 
               transition={{ duration: 1, ease: 'easeOut' }} />
-            
           </a>
-          <a href="https://apps.apple.com/ge/app/spurpunk-td/id1487386202#?platform=iphone" target="_blank" rel="noopener noreferrer" className="tag">
+          <a href="https://apps.apple.com/ge/app/spurpunk-td/id1487386202#?platform=iphone" target="_blank" rel="noopener noreferrer">
             <motion.img
               src={AppleStoreBtn} alt="Apple App Store" className="appstore-btn"
               initial={{ opacity: 0, scale: 1.5 }} animate={{ opacity: 1, scale: 1 }}
