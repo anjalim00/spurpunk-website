@@ -117,8 +117,8 @@ const Page4 = () => {
         <img src={bottomImagePage4} alt="Bottom Section" className="img-fluid bottom-img" />
         
         <div className='download-btns'>
+          <img src={PlayStore} alt="Play Store" className="img-fluid playstore" />
           <img src={AppStore} alt="App Store" className="img-fluid appstore" />
-          <img  src={PlayStore} alt="Play Store" className="img-fluid playstore" />
         </div>
         <img src={Itzamna} alt="Itzamna" className="img-fluid itzamna" />
       </div>

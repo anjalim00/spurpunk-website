@@ -243,10 +243,10 @@ box-sizing: border-box;
 
 .appstore {
   position: absolute;
-  left: 48.99%; 
+  left: 50.99%; 
   bottom: 10%;         
-  width: 20.28%;       
-  height: auto; 
+  /* width: 20.28%;        */
+  height: 6vw; 
   z-index: 5;
 }
 
