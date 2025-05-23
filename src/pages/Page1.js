@@ -67,23 +67,23 @@ const Page1 = () => {
 
           {/* Social Media Links */}
           <div className="d-flex justify-content-center">
-            <motion.img src={pressedStates.discord ? DiscordPressed : DiscordNormal} alt="Discord" className="social-btn mx-2"
+            <motion.img src={pressedStates.discord ? DiscordPressed : DiscordNormal} alt="Discord" className="social-btn mx-1"
               initial={{ y: -25, opacity: 0 }} animate={{ y: [-25, 20, 0], opacity: 1 }} style={{ transformOrigin: '50% 80%' }}
               transition={{ type: "spring", stiffness: 200, damping: 5 }} onClick={() => handlePress('discord', 200)} />
 
-            <motion.img src={pressedStates.instagram ? InstagramPressed : InstagramNormal} alt="Instagram" className="social-btn mx-2"
+            <motion.img src={pressedStates.instagram ? InstagramPressed : InstagramNormal} alt="Instagram" className="social-btn mx-1"
               initial={{ y: -25, opacity: 0 }} animate={{ y: [-25, 20, 0], opacity: 1 }}
               transition={{ type: "spring", stiffness: 250, damping: 5 }} onClick={() => handlePress('instagram', 200)} />
 
-            <motion.img src={pressedStates.youtube ? YoutubePressed : YoutubeNormal} alt="Youtube" className="social-btn mx-2"
+            <motion.img src={pressedStates.youtube ? YoutubePressed : YoutubeNormal} alt="Youtube" className="social-btn mx-1"
               initial={{ y: -25, opacity: 0 }} animate={{ y: [-25, 20, 0], opacity: 1 }}
               transition={{ type: "spring", stiffness: 250, damping: 5 }} onClick={() => handlePress('youtube', 200)} />
 
-            <motion.img src={pressedStates.x ? XPressed : XNormal} alt="X" className="social-btn mx-2"
+            <motion.img src={pressedStates.x ? XPressed : XNormal} alt="X" className="social-btn mx-1"
               initial={{ y: -25, opacity: 0 }} animate={{ y: [-25, 20, 0], opacity: 1 }}
               transition={{ type: "spring", stiffness: 250, damping: 5 }} onClick={() => handlePress('x', 200)} />
 
-            <motion.img src={pressedStates.facebook ? FacebookPressed : FacebookNormal} alt="Facebook" className="social-btn mx-2"
+            <motion.img src={pressedStates.facebook ? FacebookPressed : FacebookNormal} alt="Facebook" className="social-btn mx-1"
                         initial={{ y: -25, opacity: 0 }} animate={{ y: [-25, 20, 0], opacity: 1 }}
                         transition={{ type: "spring", stiffness: 250, damping: 5 }} onClick={() => handlePress('facebook', 200)} />
           </div>

@@ -64,8 +64,8 @@
 
 .playstore-btn,
 .appstore-btn {
-  width: 200px;
-  height: 60px;
+  width:10vw;
+  height: 3vw
 }
 
 .appstore-btn:hover,
