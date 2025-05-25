@@ -49,6 +49,16 @@
   font-size: 3vw;
   white-space: nowrap;
 }
+.follow-us {
+  color: white;
+  font-family: 'Dimbo-Regular';
+  width: auto;
+  font-size: 5vh;
+  white-space: nowrap;
+  -webkit-text-stroke: 0.2vw black; 
+  text-shadow: 0.3vw 0.2vw 0.2vw black;
+  letter-spacing: -0.1vw;
+}
 /* .tag {
   width: fit-content;
   height: 10%;
@@ -60,7 +70,6 @@
   padding: 0;
   margin: 0;
 }
-
 
 .playstore-btn,
 .appstore-btn {
@@ -188,7 +197,6 @@
 .p1-text{
   font-family: 'Dimbo-Regular';
   font-size: 8vw;
-  font-weight: 2000;
   color: white;
   -webkit-text-stroke: 0.2vw black; 
   text-shadow: 0.3vw 0.2vw 0.2vw black;
@@ -270,5 +278,49 @@
     .bottom-section {
       margin-top: -8%;
     }
+  }
+}
+
+@media (max-width: 376px) {
+  .presskit-btn {
+    width: 25%;
+    padding-left: 5%;
+  }
+  .share-icon, .download-icon {
+    width: auto;
+    height: 75%;
+  }
+  .share-btn:active, .download-btn:active {
+    box-shadow: 0 0 15px #e8e8e8;
+    border-radius: 50px;
+  }
+  .m-body {
+    background-color: #DF9542;
+    height: 350px;
+  }
+  .close-btn {
+    position: absolute;
+    top: 3%;
+    right: 3%;
+  }
+  .follow-us {
+    color: white;
+    font-family: 'Dimbo-Regular';
+    width: auto;
+    font-size: 5vh;
+    white-space: nowrap;
+    -webkit-text-stroke: 0.2vw black; 
+    text-shadow: 0.3vw 0.2vw 0.2vw black;
+    letter-spacing: -0.1vw;
+  }
+  .play-now {
+    font-size: 5vh;
+    white-space: nowrap;
+    -webkit-text-stroke: 0.2vw black; 
+    text-shadow: 0.3vw 0.2vw 0.2vw black;
+    letter-spacing: -0.1vw;
+  }
+  .social-btn {
+    width: 15% !important;
   }
 }

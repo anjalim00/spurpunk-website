@@ -53,7 +53,7 @@ const Page2 = () => {
         <img
           src={Page2DottedLine}
           alt="Page 2 Dotted Line"
-          className="page2-dotted-line"
+          className="page2-dotted-line d-md-block d-none"
         />
 
         {/* Text Backgrounds */}

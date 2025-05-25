@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import { Modal, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { addScaleCorrector, motion, useInView } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
@@ -30,7 +31,9 @@ import GooglePlayBtn from '../assets/images/GooglePlay_BTN@.png';
 import AppleStoreBtn from '../assets/images/AppleStore_BTN@.png';
 import Page1Landmass from '../assets/images/Page1_Landmass@.png';
 import SpurpunkIcon from '../assets/images/Spurpunk_icon.png';
-import BuyNowButton from '../assets/images/Buy-Now@.png';
+import Share from '../assets/images/Share.png';
+import Download from '../assets/images/Download.png';
+import Close from '../assets/images/Close.png';
 // Importing video
 import GameplayVideo from '../assets/videos/Gameplay_BurialGrounds_Clips_Better.mp4';
 
@@ -58,15 +61,18 @@ const Page1 = () => {
     }, timeout);
   };
 
+  const [showModal1, setShowModal1] = useState(false);
+  const [showModal2, setShowModal2] = useState(false);
+
   return (
     <div className="g-0 page1">
-      <div className="top-bar d-flex py-2 px-5 w-100 justify-content-between align-items-center">
-        <div className="d-flex align-items-center gap-3 justify-content-start">
+      <div className="top-bar d-flex py-2 px-md-5 w-100 justify-content-between align-items-center">
+        <div className="d-md-flex align-items-center gap-md-3 justify-content-start">
           <motion.img src={SpurpunkIcon} alt="Press Kit" className="presskit-btn" initial={{ opacity: 0, scale: 1.5 }}
             animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1, ease: 'easeOut' }} />
 
           {/* Social Media Links */}
-          <div className="d-flex justify-content-center">
+          <div className="d-md-flex justify-content-center d-none">
             <motion.img src={pressedStates.discord ? DiscordPressed : DiscordNormal} alt="Discord" className="social-btn mx-1"
               initial={{ y: -25, opacity: 0 }} animate={{ y: [-25, 20, 0], opacity: 1 }} style={{ transformOrigin: '50% 80%' }}
               transition={{ type: "spring", stiffness: 200, damping: 5 }} onClick={() => handlePress('discord', 200)} />
@@ -88,7 +94,7 @@ const Page1 = () => {
                         transition={{ type: "spring", stiffness: 250, damping: 5 }} onClick={() => handlePress('facebook', 200)} />
           </div>
         </div>
-        <div className="d-flex align-items-center gap-3 justify-content-end">
+        <div className="d-md-flex d-none align-items-center gap-3 justify-content-end">
           <motion.p className="play-now justify-content-center" initial={{ y: -25, opacity: 0 }} animate={{ y: 5, opacity: 1 }} 
                     transition={{ duration: 0.25, ease: 'easeOut' }}>Play Now:</motion.p>
 
@@ -105,6 +111,74 @@ const Page1 = () => {
               transition={{ duration: 1, ease: 'easeOut' }} />
           </a>
         </div>
+        <div className="d-flex px-2">
+          <button class="share-btn p-0 bg-transparent border-0" onClick={() => {  setShowModal1(true); }}>
+            <img src={Share} alt="Share" className="share-icon" />
+          </button>
+          <button class="download-btn p-0 bg-transparent border-0" onClick={() => {  setShowModal2(true); }}>
+            <img src={Download} alt="Download" className="download-icon" />
+          </button>
+        </div>
+        <Modal show={showModal1} onHide={() => setShowModal1(false)} size="sm" centered className="modal">
+                
+                <Modal.Body className="m-body justify-content-center d-flex flex-column align-items-center position-relative">
+                  <button  className="close-btn p-0 bg-transparent border-0"  onClick={() => setShowModal1(false)} >
+                    <img src={Close} alt="Close Button" className="close-icon"></img>
+                  </button>
+                  <motion.p className="d-flex follow-us justify-content-center align-items-center" initial={{ y: -25, opacity: 0 }} animate={{ y: 5, opacity: 1 }} 
+                              transition={{ duration: 0.25, ease: 'easeOut' }}>Follow Us</motion.p>
+                  <div className="d-flex justify-content-center align-items-center flex-wrap w-100">
+                    
+                    <motion.img src={pressedStates.discord ? DiscordPressed : DiscordNormal} alt="Discord" className="social-btn m-2"
+                      initial={{ y: -25, opacity: 0 }} animate={{ y: [-25, 20, 0], opacity: 1 }} style={{ transformOrigin: '50% 80%' }}
+                      transition={{ type: "spring", stiffness: 200, damping: 5 }} onClick={() => handlePress('discord', 200)} />
+
+                    <motion.img src={pressedStates.instagram ? InstagramPressed : InstagramNormal} alt="Instagram" className="social-btn m-2"
+                      initial={{ y: -25, opacity: 0 }} animate={{ y: [-25, 20, 0], opacity: 1 }}
+                      transition={{ type: "spring", stiffness: 250, damping: 5 }} onClick={() => handlePress('instagram', 200)} />
+
+                    <motion.img src={pressedStates.youtube ? YoutubePressed : YoutubeNormal} alt="Youtube" className="social-btn m-2"
+                      initial={{ y: -25, opacity: 0 }} animate={{ y: [-25, 20, 0], opacity: 1 }}
+                      transition={{ type: "spring", stiffness: 250, damping: 5 }} onClick={() => handlePress('youtube', 200)} />
+                  </div>
+                  <div className="d-flex justify-content-center align-items-center flex-wrap w-100">
+
+                    <motion.img src={pressedStates.x ? XPressed : XNormal} alt="X" className="social-btn m-2"
+                      initial={{ y: -25, opacity: 0 }} animate={{ y: [-25, 20, 0], opacity: 1 }}
+                      transition={{ type: "spring", stiffness: 250, damping: 5 }} onClick={() => handlePress('x', 200)} />
+
+                    <motion.img src={pressedStates.facebook ? FacebookPressed : FacebookNormal} alt="Facebook" className="social-btn m-2"
+                                initial={{ y: -25, opacity: 0 }} animate={{ y: [-25, 20, 0], opacity: 1 }}
+                                transition={{ type: "spring", stiffness: 250, damping: 5 }} onClick={() => handlePress('facebook', 200)} />
+                  </div>
+                </Modal.Body>
+        </Modal>
+
+        <Modal show={showModal2} onHide={() => setShowModal2(false)} size="lg" centered className="modal">
+                
+                <Modal.Body className="m-body m-body justify-content-center d-flex flex-column align-items-center position-relative">
+                  <button  className="close-btn p-0 bg-transparent border-0"  onClick={() => setShowModal2(false)} >
+                    <img src={Close} alt="Close Button" className="close-icon"></img>
+                  </button>
+                  <div className="d-flex flex-column align-items-center gap-3 justify-content-end">
+                    <motion.p className="play-now justify-content-center" initial={{ y: -25, opacity: 0 }} animate={{ y: 5, opacity: 1 }} 
+                              transition={{ duration: 0.25, ease: 'easeOut' }}>Play Now</motion.p>
+
+                    <a href="https://play.google.com/store/apps/details?id=com.easleydunnproductions.spurpunk&hl=en_US&gl=US" target="_blank" rel="noopener noreferrer">
+                      <motion.img
+                        src={GooglePlayBtn} alt="Google Play Store" className="playstore-btn"
+                        initial={{ opacity: 0, scale: 1.5 }} animate={{ opacity: 1, scale: 1 }} 
+                        transition={{ duration: 1, ease: 'easeOut' }} />
+                    </a>
+                    <a href="https://apps.apple.com/ge/app/spurpunk-td/id1487386202#?platform=iphone" target="_blank" rel="noopener noreferrer">
+                      <motion.img
+                        src={AppleStoreBtn} alt="Apple App Store" className="appstore-btn"
+                        initial={{ opacity: 0, scale: 1.5 }} animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 1, ease: 'easeOut' }} />
+                    </a>
+                  </div>
+                </Modal.Body>
+        </Modal>
       </div>
 
       <div className="title-container">  
