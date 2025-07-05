@@ -3,19 +3,18 @@ import axios from 'axios';
 import './Page4.css'; // Link to the external CSS for styling
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import topImagePage4 from '../assets/images/Page4_upper_layer@.png';
+import t1 from '../assets/images/t1.png';
+import t2 from '../assets/images/t2.png';
+import t3 from '../assets/images/t3.png';
 import bottomImagePage4 from '../assets/images/Page4_Bottom_Bit@.png';
-import signupMessagePage4 from '../assets/images/Page4_Signup_Invite@.png';
 import SignUpFrame from '../assets/images/Page4_Signup_Frame@.png'
 import SubmitButton from '../assets/images/submitBtn.png'
-import NameEmail from '../assets/images/Page4_Name_Email@.png'
 import Sean from  '../assets/images/Page4_Sean@.png'
 import Margarita from  '../assets/images/Page4_Margarita@.png'
 import Phil from  '../assets/images/Page4_Phil@.png'
 import Itzamna from  '../assets/images/Page4_Itzamna@.png'
 import Icon from '../assets/images/Page4_Spurpunk_icon@.png'
 import Page4DottedLine from '../assets/images/Picture1.png'
-import ArrowHead from '../assets/images/Page4_Arrowhead@.png'
 import AppStore from '../assets/images/AppleStore_BTN@.svg'
 import PlayStore from '../assets/images/GooglePlay_BTN@.png'
 import Cactus from '../assets/images/map-cactus2-icon_COPY@.png'
@@ -78,8 +77,10 @@ const Page4 = () => {
   return (
     <div className='container-fluid g-0 d-flex flex-column'>
       {/* Header */}
-      <div className='topSection'>
-        <img src={topImagePage4} alt="Testimony" className="img-fluid testimony-image w-100" />
+      <div className='topSection row g-0'>
+        <img src={t1} alt="Testimony Top" className="img-fluid testimony-slice col-12 col-md-4" />
+        <img src={t2} alt="Testimony Middle" className="img-fluid testimony-slice col-12 col-md-4" />
+        <img src={t3} alt="Testimony Bottom" className="img-fluid testimony-slice col-12 col-md-4" />
       </div>
 
       <div className='midSection position-relative d-flex justify-content-center align-items-center g-0'> 

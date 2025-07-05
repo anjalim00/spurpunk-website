@@ -74,4 +74,20 @@
   line-height: 1;
 }
 
-
+@media (max-width: 576px) {
+  .bgit, .bgim, .bgib {
+    padding-top: 5% !important;
+  }
+  .headings {
+    font-size: 3.2vh;
+  }
+  .content {
+    font-size: 2.5vh;
+  }
+  .topimg, .bottomimg {
+    padding-right: 3% !important;
+  }
+  .middleimg {
+    padding-left: 3% !important;
+  }
+}

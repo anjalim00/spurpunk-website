@@ -111,7 +111,7 @@ const Page1 = () => {
               transition={{ duration: 1, ease: 'easeOut' }} />
           </a>
         </div>
-        <div className="d-flex px-2">
+        <div className="d-flex d-md-none px-2">
           <button class="share-btn p-0 bg-transparent border-0" onClick={() => {  setShowModal1(true); }}>
             <img src={Share} alt="Share" className="share-icon" />
           </button>
@@ -130,26 +130,26 @@ const Page1 = () => {
                   <div className="d-flex justify-content-center align-items-center flex-wrap w-100">
                     
                     <motion.img src={pressedStates.discord ? DiscordPressed : DiscordNormal} alt="Discord" className="social-btn m-2"
-                      initial={{ y: -25, opacity: 0 }} animate={{ y: [-25, 20, 0], opacity: 1 }} style={{ transformOrigin: '50% 80%' }}
-                      transition={{ type: "spring", stiffness: 200, damping: 5 }} onClick={() => handlePress('discord', 200)} />
+                      initial={{ opacity: 0, scale: 1.5 }} animate={{ opacity: 1, scale: 1 }} style={{ transformOrigin: '50% 80%' }}
+                      transition={{ duration: 1, ease: 'easeOut' }} onClick={() => handlePress('discord', 200)} />
 
                     <motion.img src={pressedStates.instagram ? InstagramPressed : InstagramNormal} alt="Instagram" className="social-btn m-2"
-                      initial={{ y: -25, opacity: 0 }} animate={{ y: [-25, 20, 0], opacity: 1 }}
-                      transition={{ type: "spring", stiffness: 250, damping: 5 }} onClick={() => handlePress('instagram', 200)} />
+                      initial={{ opacity: 0, scale: 1.5 }} animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 1, ease: 'easeOut' }} onClick={() => handlePress('instagram', 200)} />
 
                     <motion.img src={pressedStates.youtube ? YoutubePressed : YoutubeNormal} alt="Youtube" className="social-btn m-2"
-                      initial={{ y: -25, opacity: 0 }} animate={{ y: [-25, 20, 0], opacity: 1 }}
-                      transition={{ type: "spring", stiffness: 250, damping: 5 }} onClick={() => handlePress('youtube', 200)} />
+                      initial={{ opacity: 0, scale: 1.5 }} animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 1, ease: 'easeOut' }} onClick={() => handlePress('youtube', 200)} />
                   </div>
                   <div className="d-flex justify-content-center align-items-center flex-wrap w-100">
 
                     <motion.img src={pressedStates.x ? XPressed : XNormal} alt="X" className="social-btn m-2"
-                      initial={{ y: -25, opacity: 0 }} animate={{ y: [-25, 20, 0], opacity: 1 }}
-                      transition={{ type: "spring", stiffness: 250, damping: 5 }} onClick={() => handlePress('x', 200)} />
+                      initial={{ opacity: 0, scale: 1.5 }} animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 1, ease: 'easeOut' }} onClick={() => handlePress('x', 200)} />
 
                     <motion.img src={pressedStates.facebook ? FacebookPressed : FacebookNormal} alt="Facebook" className="social-btn m-2"
-                                initial={{ y: -25, opacity: 0 }} animate={{ y: [-25, 20, 0], opacity: 1 }}
-                                transition={{ type: "spring", stiffness: 250, damping: 5 }} onClick={() => handlePress('facebook', 200)} />
+                                initial={{ opacity: 0, scale: 1.5 }} animate={{ opacity: 1, scale: 1 }}
+                                transition={{ duration: 1, ease: 'easeOut' }} onClick={() => handlePress('facebook', 200)} />
                   </div>
                 </Modal.Body>
         </Modal>
@@ -231,8 +231,8 @@ const Page1 = () => {
           </a>
           
         </div>
-        <p className='p1-text'>Are You a Spurpunk?</p>
-        <p className='myi'>Meet Your Instructors!</p>
+        <p className='p1-text py-4'>Are You a Spurpunk?</p>
+        <p className='myi my-3'>Meet Your Instructors!</p>
       </div> 
 
     </div>

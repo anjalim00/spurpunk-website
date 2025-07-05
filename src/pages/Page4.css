@@ -274,7 +274,6 @@ box-sizing: border-box;
   animation: brightnessAnimation 1.5s infinite alternate;
 }
 
-
 @keyframes brightnessAnimation {
   0% { filter: brightness(0.9); }
   /* 50% { filter: brightness(1.5) } */
@@ -306,3 +305,43 @@ box-sizing: border-box;
   }
 }
 
+@media (max-width: 576px) {
+  .testimony-slice {
+    height: 10%;
+    width: 80vw;
+  }
+  .signup-text {
+    font-size: 5.3vw;
+  }
+  .p4-landmass {
+    width: 80%;
+  }
+  .name-container {
+    top: 35%;
+  }
+  .email-container {
+    top: 45%;
+  }
+  .submit-button {
+    margin-top: -10%;
+    width: 32%;
+  }
+  .signup-frame {
+    width: 60%;
+  }
+  .grass, .cactus {
+    max-width: 40px;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  .p4-landmass {
+    width: 65%;
+  }
+  .signup-text {
+    font-size: 4.5vw;
+  }
+  .submit-button {
+    width: 50%;
+  }
+}

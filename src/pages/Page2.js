@@ -2,6 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
+import { Carousel } from "react-bootstrap";
 import './Page2.css';
 
 // Page2
@@ -46,7 +47,7 @@ const Page2 = () => {
   
   return (
     // <div className="page2-container page2 py-5" ref={ref}>
-      <div className="page-2 container-fluid g-0 ">
+      <div className="page2 container-fluid g-0 ">
         
 
         {/* Page 2 Dotted Line */}
@@ -60,142 +61,138 @@ const Page2 = () => {
         <div className="row g-0 text-center justify-content-center align-items-center d-flex rowc">
         
          {/*Sean  col-sm-6 col-12*/}   
-        <div className="col col-md-3">
+        <div className="col-12 col-md-3 d-none d-md-block">
             <div className="text-wrapper">
                 <p className='fonts'>Sean</p>
-                <img
-                    src={SeanGearSilhouette}
-                    alt="Sean's gear silhouette"
-                    className="img-fluid silhouette"
-                />
-                <img
-                    src={SeanGear}
-                    alt="Mickey's skull silhouette"
-                    className="hero-element"
-                />
-                <img
-                    src={HeroFrame}
-                    alt="Hero frame 1"
-                    className="hero-frame"
-                />
+                <img src={SeanGearSilhouette} alt="Sean's gear silhouette" className="img-fluid silhouette" />
+                <img src={SeanGear} alt="Mickey's skull silhouette" className="hero-element" />
+                <img src={HeroFrame} alt="Hero frame 1" className="hero-frame" />
         
-                <motion.img 
-                    src={Sean} 
-                    alt="Hero Sean" 
-                    className="hero-figure" 
-                    // initial="hidden"
-                    // animate={isInView ? ['visible', 'settle'] : 'hidden'}
-                    // variants={jumpAnimation}
+                <motion.img src={Sean} alt="Hero Sean" className="hero-figure" 
+                    // initial="hidden" animate={isInView ? ['visible', 'settle'] : 'hidden'} variants={jumpAnimation}
                 />
                 <p className='sp-title'>Electric Spurpunk</p>
-                <p className='sp-content'>Creates weapons from any<br/>and all scraps - metal, wood,<br/>even bone.</p>
+                <p className='sp-content px-3'>Creates weapons from any<br/>and all scraps - metal, wood,<br/>even bone.</p>
                 
             </div>
         </div>
 
         {/* Margarita  col-sm-6 col-12*/}
-        <div className="col col-md-3">
-            <div className="text-wrapper">
+        <div className="col-12 col-md-3 d-none d-md-block">
+          <div className="text-wrapper">
             <p className='fonts'>Margarita</p>
-            <img
-              src={MargaritaCardsSilhouette}
-              alt="Margarita's cards silhouette"
-              className="img-fluid silhouette"
-            />
-            <img
-              src={MargaritaCards}
-              alt="Mickey's skull silhouette"
-              className="hero-element"
-            />
-            <img
-                src={HeroFrame}
-                alt="Hero frame 2"
-                className="hero-frame"
-            />
+            <img src={MargaritaCardsSilhouette} alt="Margarita's cards silhouette" className="img-fluid silhouette" />
+            <img src={MargaritaCards} alt="Mickey's skull silhouette" className="hero-element" />
+            <img src={HeroFrame} alt="Hero frame 2" className="hero-frame" />
             
-            <motion.img 
-                src={Margarita} 
-                alt="Hero Margarita" 
-                className="hero-figure" 
-                // initial="hidden"
-                // animate={isInView ? ['visible', 'settle'] : 'hidden'}
-                // variants={jumpAnimation}
+            <motion.img  src={Margarita} alt="Hero Margarita" className="hero-figure" 
+                // initial="hidden" animate={isInView ? ['visible', 'settle'] : 'hidden'} variants={jumpAnimation}
             />
             <p className='sp-title'>Elemental Spurpunk</p>
-            <p className='sp-content'>A mage with a talent to create<br/>dangerous spells from<br/>playing cards.</p>
+            <p className='sp-content px-3'>A mage with a talent to<br/>create dangerous spells from<br/>playing cards.</p>
             
-            </div> 
+          </div> 
         </div>
 
         {/* Phil col-sm-6 col-12*/}
-        <div className="col col-md-3">
-            <div className="text-wrapper">
+        <div className="col-12 col-md-3 d-none d-md-block">
+          <div className="text-wrapper">
             <p className='fonts'>Phil</p>
-            <img
-              src={PhilBombSilhouette}
-              alt="Phil's bomb silhouette"
-              className="img-fluid silhouette"
-            />
-            <img
-              src={PhilBomb}
-              alt="Mickey's skull silhouette"
-              className="hero-element"
-            />
-            <img
-                src={HeroFrame}
-                alt="Hero frame 3"
-                className="hero-frame"
-            />
+            <img src={PhilBombSilhouette} alt="Phil's bomb silhouette" className="img-fluid silhouette" />
+            <img src={PhilBomb} alt="Mickey's skull silhouette" className="hero-element" />
+            <img src={HeroFrame} alt="Hero frame 3" className="hero-frame" />
             
-            <motion.img 
-                src={Phil} 
-                alt="Hero Phil" 
-                className="hero-figure" 
-                // initial="hidden"
-                // animate={isInView ? ['visible', 'settle'] : 'hidden'}
-                // variants={jumpAnimation}
+            <motion.img src={Phil} alt="Hero Phil"  className="hero-figure" 
+                // initial="hidden" animate={isInView ? ['visible', 'settle'] : 'hidden'} variants={jumpAnimation}
             />
             <p className='sp-title'>Ghost Spurpunk</p>
-            <p className='sp-content'>An ectoplasmic shopkeeper<br/>who crafts unstable items<br/>and then puts them on sale.</p>
+            <p className='sp-content px-3'>An ectoplasmic shopkeeper<br/>who crafts unstable items<br/>and then puts them on sale.</p>
             
-            </div>
+          </div>
         </div>
 
         {/* Mickey  col-12 col-sm-6 */}
-        <div className="col col-md-3 ">
-            <div className="text-wrapper">
-            <p className='fonts'>Mickey</p>
-            <img
-              src={MickeySkullSilhouette}
-              alt="Mickey's skull silhouette"
-              className="silhouette"
-            />
-            <img
-              src={MickeySkull}
-              alt="Mickey's skull silhouette"
-              className="hero-element"
-            />
-            <img
-                src={HeroFrame}
-                alt="Hero frame 2"
-                className="hero-frame"
-            />
-            
-            <motion.img 
-                src={Mickey} 
-                alt="Hero Mickey" 
-                className="hero-figure mickey" 
-                // initial="hidden"
-                // animate={isInView ? ['visible', 'settle'] : 'hidden'}
-                // variants={jumpAnimation}
-            />
-            <p className='sp-title'>Dark Spurpunk</p>
-            <p className='sp-content'>A powerful necromancer<br/>who commands an army of<br/>the undead.</p>
-            </div>
+        <div className="col-12 col-md-3 d-none d-md-block">
+          <div className="text-wrapper">
+              <p className='fonts'>Mickey</p>
+              <img src={MickeySkullSilhouette} alt="Mickey's skull silhouette" className="silhouette" />
+              <img src={MickeySkull} alt="Mickey's skull silhouette"  className="hero-element" />
+              <img src={HeroFrame} alt="Hero frame 2" className="hero-frame" />
+              
+              <motion.img src={Mickey} alt="Hero Mickey" className="hero-figure mickey" 
+                  // initial="hidden" animate={isInView ? ['visible', 'settle'] : 'hidden'} variants={jumpAnimation}
+              />
+              <p className='sp-title'>Dark Spurpunk</p>
+              <p className='sp-content px-3'>A powerful necromancer<br/>who commands an army of<br/>the undead.</p>
+          </div>
         </div>
+
+        <Carousel interval={50000} wrap={true} pause={false} indicators={false} controls={true} className='d-block d-md-none'>
+            <Carousel.Item>
+            <div className="text-wrapper">
+                <p className='fonts'>Sean</p>
+                <img src={SeanGearSilhouette} alt="Sean's gear silhouette" className="img-fluid silhouette" />
+                <img src={SeanGear} alt="Mickey's skull silhouette" className="hero-element" />
+                <img src={HeroFrame} alt="Hero frame 1" className="hero-frame" />
+        
+                <motion.img src={Sean} alt="Hero Sean" className="hero-figure" 
+                    // initial="hidden" animate={isInView ? ['visible', 'settle'] : 'hidden'} variants={jumpAnimation}
+                />
+                <p className='sp-title'>Electric Spurpunk</p>
+                <p className='sp-content px-3'>Creates weapons from any<br/>and all scraps - metal, wood,<br/>even bone.</p>
+                
+              </div>
+            </Carousel.Item>
+
+            <Carousel.Item>
+              <div className="text-wrapper">
+                <p className='fonts'>Margarita</p>
+                <img src={MargaritaCardsSilhouette} alt="Margarita's cards silhouette" className="img-fluid silhouette" />
+                <img src={MargaritaCards} alt="Mickey's skull silhouette" className="hero-element" />
+                <img src={HeroFrame} alt="Hero frame 2" className="hero-frame" />
+                
+                <motion.img src={Margarita} alt="Hero Margarita" className="hero-figure" 
+                    // initial="hidden" animate={isInView ? ['visible', 'settle'] : 'hidden'} variants={jumpAnimation}
+                />
+                <p className='sp-title'>Elemental Spurpunk</p>
+                <p className='sp-content px-3'>A mage with a talent to create<br/>dangerous spells from<br/>playing cards.</p>
+            
+              </div> 
+            </Carousel.Item>
+
+            <Carousel.Item>
+              <div className="text-wrapper">
+                <p className='fonts'>Phil</p>
+                <img src={PhilBombSilhouette} alt="Phil's bomb silhouette" className="img-fluid silhouette" />
+                <img src={PhilBomb} alt="Mickey's skull silhouette" className="hero-element" />
+                <img src={HeroFrame} alt="Hero frame 3" className="hero-frame" />
+                
+                <motion.img src={Phil} alt="Hero Phil" className="hero-figure" 
+                    // initial="hidden" animate={isInView ? ['visible', 'settle'] : 'hidden'} variants={jumpAnimation}
+                />
+                <p className='sp-title'>Ghost Spurpunk</p>
+                <p className='sp-content px-3'>An ectoplasmic shopkeeper<br/>who crafts unstable items<br/>and then puts them on sale.</p>
+              
+              </div>
+            </Carousel.Item>
+
+            <Carousel.Item>
+              <div className="text-wrapper">
+                <p className='fonts'>Mickey</p>
+                <img src={MickeySkullSilhouette} alt="Mickey's skull silhouette" className="silhouette" />
+                <img src={MickeySkull} alt="Mickey's skull silhouette"  className="hero-element" />
+                <img src={HeroFrame} alt="Hero frame 2" className="hero-frame" />
+                
+                <motion.img src={Mickey} alt="Hero Mickey" className="hero-figure mickey" 
+                    // initial="hidden" animate={isInView ? ['visible', 'settle'] : 'hidden'} variants={jumpAnimation}
+                />
+                <p className='sp-title'>Dark Spurpunk</p>
+                <p className='sp-content px-3'>A powerful necromancer<br/>who commands an army of<br/>the undead.</p>
+              </div>
+            </Carousel.Item>
+        </Carousel>
         </div>
         
-      {/* </div> */}
     </div>
   );
 };

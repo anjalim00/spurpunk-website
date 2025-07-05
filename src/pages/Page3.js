@@ -48,7 +48,7 @@ const Page3 = () => {
 
           <div className='col-12 col-sm-6 d-flex flex-column justify-content-center align-items-end p-4 bgit'>
             <p className='headings' style={{ textAlign: 'right' }}>The First Combination Tower<br/>Defense and Card Game</p>
-            <p className='content'>Set your towers up but also stay agile with what<br/>cards and spells you use to buff your towers or<br/>repel the creatures. Your cardplay can level your<br/>tower arsenal into a wining defense.</p>
+            <p className='content text-align-right'>Set your towers up but also stay agile with what<br/>cards and spells you use to buff your towers or<br/>repel the creatures. Your cardplay can level your<br/>tower arsenal into a wining defense.</p>
           </div>
         </motion.div>
 

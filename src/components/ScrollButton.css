@@ -1,0 +1,21 @@
+.scroll-btn {
+    position: fixed;
+    bottom: 5%;
+    right: 3%;
+    z-index: 999; /* Keep it above other elements */
+    width: 10vw;
+    height: auto;
+    max-width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.scroll-icon{
+    width: 10vw;
+    height: auto;
+} 
+.scroll-btn:hover {
+    filter: brightness(1.1);
+}
+  
